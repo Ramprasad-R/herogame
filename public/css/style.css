@@ -1,30 +1,50 @@
 body {
   text-align: center;
+  background-color: rgb(228, 252, 252);
+}
+footer{
+  color: rgb(47, 109, 106)
 }
 .playControl-item{
   width: 100px;
   height: 100px;
   padding: 20px 30px 20px 30px;
+  border-radius: 50%;
 }
 .displayStat{
   display: inline-block;
   margin: 30px;
-  border: 2px solid rgb(33, 194, 243);
   border-radius: 10%;
   padding: 20px;
   
 }
 .heroStat{
   color: rgb(48, 91, 207);
+  border: 2px solid rgb(48, 91, 207);
 }
 .enemyStat{
   color: rgb(134, 31, 31);
+  border: 2px solid rgb(134, 31, 31);;
 }
 .getName{
   margin: 30px;
   padding: 0 20px 0 20px;
+  color: rgb(47, 109, 106);
 }
 
 .nameItem{
-  padding: 5px 10px 5px 20px;
+  padding: 5px 10px 5px 10px;
+}
+
+.footerLogo{
+  color: rgb(255, 0, 0);
+}
+
+.fighterLogo{
+  width: 100px;
+  height: 100px;
+}
+
+.hideMe{
+  display: none;
 }

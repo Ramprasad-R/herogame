@@ -8,7 +8,7 @@
 <body>
     <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
     <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
-    
+
   <div class="getName">
     <form onsubmit="submitName(); return false">
       <label class="nameItem" for="heroName">Enter Hero Name : </label>
@@ -21,14 +21,18 @@
 
   <section id="displayStat"> 
     <div class="displayStat heroStat">
+      <img class="fighterLogo" src="./public/images/superman.png" alt="Hero">
 
     </div>
-    <div class="displayStat enemyStat"></div>
+    <div class="displayStat enemyStat">
+        <img class="fighterLogo" src="./public/images/enemy.png" alt="Enemy">
+
+    </div>
   </section>
   
   <section id="playControls">
     <div class="playControls">
-      <img class="playControl-item" src="./public/images/dragger.jpg" alt="Dagger" onclick="invokePickUpItems()" id="dagger">
+      <img class="playControl-item dragger-item" src="./public/images/dragger.jpg" alt="Dagger" onclick="invokePickUpItems()" id="dagger">
       <img class="playControl-item" src="./public/images/rest.jpg" alt="Rest" onclick="invokeRest()" id="inn">
       <img class="playControl-item" src="./public/images/bag.jpeg" alt="Bag" onclick="invokeEquipWepon()" id="bag">
       <img class="playControl-item" src="./public/images/fight.jpg" alt="Fight" onclick="invokeFight()" id="fight" >
@@ -49,7 +53,7 @@
   <script src="herogame.js"></script>
   <script src="lib/game_logic.test.js"></script>
   <footer>
-      <p>Made with ❤ at Codaisseur</p>
+      <p>Made with<span class="footerLogo"> ❤</span> at Codaisseur</p>
   </footer> 
 </body>
 </html>

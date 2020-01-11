@@ -16,7 +16,7 @@ const enemy = {
   health: 10,
   weapon: {
     type: "dragger",
-    damage: 3
+    damage: 2
   }
 }
 
@@ -69,7 +69,8 @@ function invokePickUpItems() {
     type: "dagger",
     damage: 2
   });
-  displayStat();
+  const draggerElement = document.querySelector(".dragger-item");
+  draggerElement.classList.add("hideMe");
 }
 
 function invokeEquipWepon() {
@@ -90,15 +91,15 @@ const createEnemyCurrentWeapon = document.createElement("p");
 const createEnemyAssaultPower = document.createElement("p");
 function displayStat() {
   // Hero Stat
-  createHeroName.innerText = `Super Hero Name : ${hero.name}`;
-  createHeroHealth.innerText = `Current Health: ${hero.health}`;
-  createHeroCurrentWeapon.innerText = `Current Weapon: ${hero.weapon.type}`;
-  createHeroAssaultPower.innerText = `Assault Power of the weapon: ${hero.weapon.damage}`;
+  createHeroName.innerText = `Hero Name : ${hero.name}`;
+  createHeroHealth.innerText = `Health: ${hero.health}`;
+  createHeroCurrentWeapon.innerText = `Weapon: ${hero.weapon.type}`;
+  createHeroAssaultPower.innerText = `Assault Power: ${hero.weapon.damage}`;
   //Enemy Stat
   createEnemyName.innerText = `Enemy Name : ${enemy.name}`;
-  createEnemyHealth.innerText = `Current Health: ${enemy.health}`;
-  createEnemyCurrentWeapon.innerText = `Current Weapon: ${enemy.weapon.type}`;
-  createEnemyAssaultPower.innerText = `Assault Power of the weapon: ${enemy.weapon.damage}`;
+  createEnemyHealth.innerText = `Health: ${enemy.health}`;
+  createEnemyCurrentWeapon.innerText = `Weapon: ${enemy.weapon.type}`;
+  createEnemyAssaultPower.innerText = `Assault Power: ${enemy.weapon.damage}`;
 }
 //Display Hero
 displayStatDiv[0].appendChild(createHeroName);
@@ -115,7 +116,7 @@ displayStat();
 
 function fight() {
   const randomWinner = Math.floor(Math.random() * 2);
-  if (hero.health > 3) {
+  if (hero.health > 3 && enemy.health > 0) {
     if (randomWinner === 0) {
       alert(`${hero.name} won ${enemy.name}`);
       enemy.health = enemy.health - hero.weapon.damage;
@@ -124,6 +125,8 @@ function fight() {
       alert(`${hero.name} lost to ${enemy.name}`);
       hero.health = hero.health - enemy.weapon.damage;
     }
+  } else if (enemy.health <= 0) {
+    alert(`${hero.name} killed ${enemy.name} refresh the page to continue playing`);
   } else {
     alert("Get rest before fighting")
   }
