@@ -20,6 +20,23 @@ const enemy = {
   }
 }
 
+function submitName() {
+  function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+  const getHeroName = document.getElementById("heroName");
+  const heroName = capitalizeFirstLetter(getHeroName.value);
+  const getEnemyName = document.getElementById("enemyName");
+  const enemyName = capitalizeFirstLetter(getEnemyName.value);
+  if (heroName) {
+    hero.name = heroName;
+  }
+  if (enemyName) {
+    enemy.name = enemyName;
+  }
+  displayStat();
+}
+
 function rest(person) {
   if (person.health === 10) {
     alert("You are already healthy");
@@ -98,11 +115,11 @@ displayStat();
 
 function fight() {
   const randomWinner = Math.floor(Math.random() * 2);
-  if(hero.health > 3){
+  if (hero.health > 3) {
     if (randomWinner === 0) {
       alert(`${hero.name} won ${enemy.name}`);
       enemy.health = enemy.health - hero.weapon.damage;
-      
+
     } else {
       alert(`${hero.name} lost to ${enemy.name}`);
       hero.health = hero.health - enemy.weapon.damage;

@@ -12,5 +12,19 @@ body {
   border: 2px solid rgb(33, 194, 243);
   border-radius: 10%;
   padding: 20px;
-  color: rgb(30, 54, 54);
+  
+}
+.heroStat{
+  color: rgb(48, 91, 207);
+}
+.enemyStat{
+  color: rgb(134, 31, 31);
+}
+.getName{
+  margin: 30px;
+  padding: 0 20px 0 20px;
+}
+
+.nameItem{
+  padding: 5px 10px 5px 20px;
 }

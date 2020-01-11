@@ -6,11 +6,24 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
+    <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
+    <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
+    
+  <div class="getName">
+    <form onsubmit="submitName(); return false">
+      <label class="nameItem" for="heroName">Enter Hero Name : </label>
+      <input class="nameItem" type="text" name="heroName" id="heroName">
+      <label class="nameItem" for="enemyName">Enter Enemy Name : </label>
+      <input class="nameItem" type="text" name="enemyName" id="enemyName">
+      <button class="nameItem" type="submit">Submit</button>
+    </form>
+  </div>
+
   <section id="displayStat"> 
-    <div class="displayStat">
+    <div class="displayStat heroStat">
 
     </div>
-    <div class="displayStat"></div>
+    <div class="displayStat enemyStat"></div>
   </section>
   
   <section id="playControls">
@@ -23,8 +36,7 @@
   </section>
 
 
-  <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
-  <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
+
 
   <div id="mocha">
   <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
@@ -36,6 +48,8 @@
   <script>mocha.setup('bdd')</script>
   <script src="herogame.js"></script>
   <script src="lib/game_logic.test.js"></script>
-
+  <footer>
+      <p>Made with ❤ at Codaisseur</p>
+  </footer> 
 </body>
 </html>
