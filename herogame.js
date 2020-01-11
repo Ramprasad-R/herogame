@@ -43,3 +43,7 @@ function invokePickUpItems() {
 function invokeEquipWepon(){
   equipWeapon(hero)
 }
+
+function displayStat(){
+  
+}

@@ -1,14 +1,24 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Mocha Tests</title>
+    <title>Hero Game</title>
     <link href="lib/mocha.css" rel="stylesheet" />
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
+  <section id="displayStat"> 
+    <div class="displayStat">
 
-  <img src="" alt="Rest" onclick="invokeRest()" id="inn">
-  <img src="" alt="Dagger" onclick="invokePickUpItems()" id="dagger">
-  <img src="" alt="Bag" onclick="invokeEquipWepon()" id="bag">
+    </div>
+  </section>
+  
+  <section id="playControls">
+    <div class="playControls">
+      <img class="playControl-item" src="./public/images/dragger.jpg" alt="Dagger" onclick="invokePickUpItems()" id="dagger">
+      <img class="playControl-item" src="./public/images/rest.jpg" alt="Rest" onclick="invokeRest()" id="inn">
+      <img class="playControl-item" src="./public/images/bag.jpeg" alt="Bag" onclick="invokeEquipWepon()" id="bag">
+    </div>
+  </section>
 
 
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
