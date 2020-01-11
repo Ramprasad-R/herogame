@@ -1,14 +1,15 @@
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Hero Game</title>
-    <link href="lib/mocha.css" rel="stylesheet" />
-    <link rel="stylesheet" href="public/css/style.css">
-</head>
-<body>
-    <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
-    <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
 
+<head>
+  <meta charset="utf-8">
+  <title>Hero Game</title>
+  <link href="lib/mocha.css" rel="stylesheet" />
+  <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body>
+  <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
+  <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
   <div class="getName">
     <form onsubmit="submitName(); return false">
       <label class="nameItem" for="heroName">Enter Hero Name : </label>
@@ -18,24 +19,27 @@
       <button class="nameItem" type="submit">Submit</button>
     </form>
   </div>
-
-  <section id="displayStat"> 
+<section id="result">
+  <div class="showResult"></div>
+</section>
+  <section id="displayStat">
     <div class="displayStat heroStat">
       <img class="fighterLogo" src="./public/images/superman.png" alt="Hero">
 
     </div>
     <div class="displayStat enemyStat">
-        <img class="fighterLogo" src="./public/images/enemy.png" alt="Enemy">
+      <img class="fighterLogo" src="./public/images/enemy.png" alt="Enemy">
 
     </div>
   </section>
-  
+
   <section id="playControls">
     <div class="playControls">
-      <img class="playControl-item dragger-item" src="./public/images/dragger.jpg" alt="Dagger" onclick="invokePickUpItems()" id="dagger">
+      <img class="playControl-item dragger-item" src="./public/images/dragger.jpg" alt="Dagger"
+        onclick="invokePickUpItems()" id="dagger">
       <img class="playControl-item" src="./public/images/rest.jpg" alt="Rest" onclick="invokeRest()" id="inn">
       <img class="playControl-item" src="./public/images/bag.jpeg" alt="Bag" onclick="invokeEquipWepon()" id="bag">
-      <img class="playControl-item" src="./public/images/fight.jpg" alt="Fight" onclick="invokeFight()" id="fight" >
+      <img class="playControl-item" src="./public/images/fight.jpg" alt="Fight" onclick="invokeFight()" id="fight">
     </div>
   </section>
 
@@ -43,17 +47,20 @@
 
 
   <div id="mocha">
-  <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
+    <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
   </div>
 
   <script src="lib/chai.js"></script>
   <script src="lib/mocha.js"></script>
   <script src="lib/sinon.js"></script>
-  <script>mocha.setup('bdd')</script>
+  <script>
+    mocha.setup('bdd')
+  </script>
   <script src="herogame.js"></script>
   <script src="lib/game_logic.test.js"></script>
   <footer>
-      <p>Made with<span class="footerLogo"> ❤</span> at Codaisseur</p>
-  </footer> 
+    <p>Made with<span class="footerLogo"> ❤</span> at Codaisseur</p>
+  </footer>
 </body>
+
 </html>

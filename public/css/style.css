@@ -1,30 +1,40 @@
 body {
   text-align: center;
-  background-color: rgb(228, 252, 252);
+  background-color: rgb(245, 248, 248);
 }
 footer{
-  color: rgb(47, 109, 106)
+  color: rgb(47, 109, 106);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;   
+}
+.playControls{
+  border: 3px solid rgb(29, 29, 245);
+  border-radius: 10%;
+  width: 30%;
+  margin: 0 auto;
 }
 .playControl-item{
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   padding: 20px 30px 20px 30px;
-  border-radius: 50%;
+  border-radius: 40%;
 }
 .displayStat{
   display: inline-block;
   margin: 30px;
   border-radius: 10%;
   padding: 20px;
-  
+  width: 20%;
 }
 .heroStat{
-  color: rgb(48, 91, 207);
-  border: 2px solid rgb(48, 91, 207);
+  color: rgb(29, 245, 29);
+  border: 2px solid rgb(29, 245, 29);
 }
 .enemyStat{
-  color: rgb(134, 31, 31);
-  border: 2px solid rgb(134, 31, 31);;
+  color: rgb(245, 29, 29);
+  border: 2px solid rgb(245, 29, 29);
 }
 .getName{
   margin: 30px;
@@ -47,4 +57,17 @@ footer{
 
 .hideMe{
   display: none;
+}
+.showResult{
+  color: rgb(255, 255, 255);
+  padding: 5px 0 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.publishResult{
+  width: 30%;
+  height: 40px;
+  background-color: red;
+  border-radius: 10%;
+  margin:0 auto;
 }

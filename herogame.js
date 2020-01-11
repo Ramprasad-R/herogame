@@ -113,23 +113,24 @@ displayStatDiv[1].appendChild(createEnemyCurrentWeapon);
 displayStatDiv[1].appendChild(createEnemyAssaultPower);
 
 displayStat();
-
+const showResult = document.querySelector(".showResult");
 function fight() {
   const randomWinner = Math.floor(Math.random() * 2);
   if (hero.health > 3 && enemy.health > 0) {
     if (randomWinner === 0) {
-      alert(`${hero.name} won ${enemy.name}`);
+      showResult.innerHTML = `<p>${hero.name} won ${enemy.name}</p>`;
       enemy.health = enemy.health - hero.weapon.damage;
 
     } else {
-      alert(`${hero.name} lost to ${enemy.name}`);
+      showResult.innerHTML = `<p>${hero.name} lost to ${enemy.name}</p>`;
       hero.health = hero.health - enemy.weapon.damage;
     }
   } else if (enemy.health <= 0) {
-    alert(`${hero.name} killed ${enemy.name} refresh the page to continue playing`);
+    showResult.innerHTML = `<p>${hero.name} killed ${enemy.name} refresh the page to continue playing </p>`;
   } else {
-    alert("Get rest before fighting")
+    showResult.innerHTML = "<p>Get rest before fighting</p>";
   }
+  showResult.classList.add("publishResult")
 }
 
 function invokeFight() {
