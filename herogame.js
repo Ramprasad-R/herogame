@@ -34,6 +34,8 @@ function submitName() {
   if (enemyName) {
     enemy.name = enemyName;
   }
+  getHeroName.value = "";
+  getEnemyName.value = "";
   displayStat();
 }
 
